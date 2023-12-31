@@ -35,7 +35,7 @@ class PoliRegisterController extends Controller
     public function index()
     {
         return view('dashboard.patient.poli-register.index', [
-            'title' => 'Gitarasa',
+            'title' => 'BK Poliklinik',
             'description' => '',
             'keywords' => '',
         ]);
@@ -51,7 +51,7 @@ class PoliRegisterController extends Controller
         $result = $this->poliRegisterService->create();
 
         return view('dashboard.patient.poli-register.create', [
-            'title' => 'Gitarasa',
+            'title' => 'BK Poliklinik',
             'description' => '',
             'keywords' => '',
             'poli' => $result->poli,
@@ -82,7 +82,7 @@ class PoliRegisterController extends Controller
         $result = $this->poliRegisterService->show($id);
 
         return view('dashboard.patient.poli-register.show', [
-            'title' => 'Gitarasa',
+            'title' => 'BK Poliklinik',
             'description' => '',
             'keywords' => '',
             'poli' => $result->poli,
