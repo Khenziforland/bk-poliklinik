@@ -17,7 +17,7 @@
                     data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <div class="user-nav d-sm-flex d-none">
                         <span class="user-name fw-bolder">
-                            {{ auth()->user()->username }}
+                            {{ Session::get('name') }}
                         </span>
                     </div>
 
