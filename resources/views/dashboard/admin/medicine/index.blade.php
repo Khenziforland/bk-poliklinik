@@ -83,8 +83,8 @@
                 },
 
                 {
-                    data: 'price',
-                    name: 'price'
+                    data: 'priceCustom',
+                    name: 'priceCustom'
                 },
 
                 {

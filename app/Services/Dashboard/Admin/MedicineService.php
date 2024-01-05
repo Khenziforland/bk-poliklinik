@@ -164,6 +164,11 @@ class MedicineService
         $medicine = Medicine::orderBy('name', 'asc')->get();
 
         $medicine = DataTables::of($medicine)
+            ->addColumn('priceCustom', function ($row) {
+                $menu = FormatterCustom::formatNumber($row->price, true);
+
+                return $menu;
+            })
             ->addColumn('action', function ($row) {
                 $id = Crypt::encrypt($row->id);
 
