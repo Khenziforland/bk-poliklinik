@@ -34,10 +34,6 @@
                             </th>
 
                             <th>
-                                Obat
-                            </th>
-
-                            <th>
                                 Biaya
                             </th>
 
@@ -88,11 +84,6 @@
                 {
                     data: 'noteCustom',
                     name: 'noteCustom'
-                },
-
-                {
-                    data: 'medicineNameCustom',
-                    name: 'medicineNameCustom'
                 },
 
                 {
