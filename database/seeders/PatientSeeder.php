@@ -43,7 +43,7 @@ class PatientSeeder extends Seeder
         ]);
 
         $user = User::create([
-            'email' => 'patien2@gmail.com',
+            'email' => 'patient2@gmail.com',
             'password' => Hash::make('patien2'),
         ]);
 

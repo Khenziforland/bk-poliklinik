@@ -26,6 +26,6 @@ Route::group(
     function () {
         Route::get('/', [LandingPageController::class, 'index'])
             ->middleware(['guest'])
-            ->name('login');
+            ->name('landing-page');
     }
 );

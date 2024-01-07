@@ -113,7 +113,7 @@ class PoliRegisterService
         $patient = Patient::firstWhere('user_id', $userId);
 
         $poliRegister = PoliRegister::where("patient_id", $patient->id)
-        ->orderBy('created_at', 'desc')->get();
+            ->orderBy('created_at', 'desc')->get();
 
         $poliRegister = DataTables::of($poliRegister)
             ->addColumn('poliRegisterDateCustom', function ($row) {
@@ -219,7 +219,8 @@ class PoliRegisterService
             $day = FormatterCustom::changeDayIndo($day);
 
             $checkupSchedule = CheckupSchedule::where('poli_id', $request->poliId)
-                ->where('day', $day);
+                ->where('day', $day)
+                ->where('status', 'Aktif');
 
             if ($request->poliRegisterDate == $today) {
                 $checkupSchedule = $checkupSchedule->where('end_time', '>', $hourNow);
